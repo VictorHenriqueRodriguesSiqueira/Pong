@@ -27,10 +27,10 @@ namespace Pong.Models
         public const int PontuacaoMaxima = 5;
 
         private const int MargemRaquete = 20;
-        private const int LarguraRaquete = 20;
-        private const int AlturaRaquete = 100;
+        private const int LarguraRaquete = 26;
+        private const int AlturaRaquete = 102;
         private const int VelocidadeRaquete = 8;
-        private const int TamanhoBola = 24;
+        private const int TamanhoBola = 26;
 
         private volatile EstadoPartida _estado;
 
