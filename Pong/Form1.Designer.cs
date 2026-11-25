@@ -33,11 +33,11 @@
             this.lblPlacar = new System.Windows.Forms.Label();
             this.lblJogador2 = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
-            this.areaJogo = new Pong.AreaJogoControl();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.btnPausar = new System.Windows.Forms.Button();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnPontuacao = new System.Windows.Forms.Button();
+            this.areaJogo = new Pong.AreaJogoControl();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -90,19 +90,10 @@
             // 
             this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Gold;
-            this.lblMensagem.Location = new System.Drawing.Point(282, 520);
+            this.lblMensagem.Location = new System.Drawing.Point(184, 505);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(100, 23);
+            this.lblMensagem.Size = new System.Drawing.Size(332, 33);
             this.lblMensagem.TabIndex = 4;
-            // 
-            // areaJogo
-            // 
-            this.areaJogo.Location = new System.Drawing.Point(12, 184);
-            this.areaJogo.Name = "areaJogo";
-            this.areaJogo.Size = new System.Drawing.Size(616, 264);
-            this.areaJogo.TabIndex = 5;
-            this.areaJogo.TabStop = false;
-            this.areaJogo.Text = "areaJogoControl1";
             // 
             // btnIniciar
             // 
@@ -114,6 +105,7 @@
             this.btnIniciar.TabIndex = 6;
             this.btnIniciar.Text = "Iniciar Jogo";
             this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // btnPausar
             // 
@@ -125,6 +117,7 @@
             this.btnPausar.TabIndex = 7;
             this.btnPausar.Text = "Pausar Jogo";
             this.btnPausar.UseVisualStyleBackColor = false;
+            this.btnPausar.Click += new System.EventHandler(this.btnPausar_Click);
             // 
             // btnReiniciar
             // 
@@ -136,6 +129,7 @@
             this.btnReiniciar.TabIndex = 8;
             this.btnReiniciar.Text = "Reiniciar Jogo";
             this.btnReiniciar.UseVisualStyleBackColor = false;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // btnPontuacao
             // 
@@ -147,6 +141,16 @@
             this.btnPontuacao.TabIndex = 9;
             this.btnPontuacao.Text = "Exibir Pontuação";
             this.btnPontuacao.UseVisualStyleBackColor = false;
+            this.btnPontuacao.Click += new System.EventHandler(this.btnPontuacao_Click);
+            // 
+            // areaJogo
+            // 
+            this.areaJogo.Location = new System.Drawing.Point(12, 184);
+            this.areaJogo.Name = "areaJogo";
+            this.areaJogo.Size = new System.Drawing.Size(616, 264);
+            this.areaJogo.TabIndex = 5;
+            this.areaJogo.TabStop = false;
+            this.areaJogo.Text = "areaJogoControl1";
             // 
             // Form1
             // 
@@ -165,12 +169,13 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pong";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
