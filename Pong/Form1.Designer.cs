@@ -114,7 +114,6 @@
             this.btnIniciar.TabIndex = 6;
             this.btnIniciar.Text = "Iniciar Jogo";
             this.btnIniciar.UseVisualStyleBackColor = false;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // btnPausar
             // 
@@ -126,7 +125,6 @@
             this.btnPausar.TabIndex = 7;
             this.btnPausar.Text = "Pausar Jogo";
             this.btnPausar.UseVisualStyleBackColor = false;
-            this.btnPausar.Click += new System.EventHandler(this.btnPausar_Click);
             // 
             // btnReiniciar
             // 
@@ -138,7 +136,6 @@
             this.btnReiniciar.TabIndex = 8;
             this.btnReiniciar.Text = "Reiniciar Jogo";
             this.btnReiniciar.UseVisualStyleBackColor = false;
-            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // btnPontuacao
             // 
@@ -150,7 +147,6 @@
             this.btnPontuacao.TabIndex = 9;
             this.btnPontuacao.Text = "Exibir Pontuação";
             this.btnPontuacao.UseVisualStyleBackColor = false;
-            this.btnPontuacao.Click += new System.EventHandler(this.btnPontuacao_Click);
             // 
             // Form1
             // 
@@ -169,13 +165,12 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pong";
-            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
